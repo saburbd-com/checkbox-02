@@ -1,0 +1,185 @@
+/* Font Include */
+@import url('https://fonts.googleapis.com/css2?family=Langar&family=Rajdhani:wght@600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+    font-size: 25px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+h1,
+p {
+    font-family: 'Langar', cursive;
+}
+
+/* Responsive */
+@media only screen and (min-width: 576px) {
+    h1 {
+        margin-top: 75px;
+    }
+
+    .col-md-6 {
+        min-height: 30vh;
+    }
+
+    .center {
+        top: 50%;
+        left: 50%;
+        height: 25vh;
+        position: absolute !important;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    body {
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .center {
+        height: 70vh;
+        overflow-y: auto;
+        padding-top: 50px;
+    }
+}
+
+.checkbox {
+    width: 80%;
+    height: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+
+.checkbox:after {
+    content: '';
+    height: 12px;
+    width: 80%;
+    border-radius: 50px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox label {
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(0, 0, 0, 1) inset;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+    z-index: 1;
+    transition: all 0.4s ease 0s;
+}
+
+.checkbox input[type=checkbox] {
+    margin: 0;
+    visibility: hidden;
+}
+
+.checkbox input[type=checkbox]:checked + label {
+    left: 79%;
+}
+
+.checkbox.primary {
+    background: #0e83cd;
+}
+
+.checkbox.primary:after,
+.checkbox.primary label {
+    background: #084d77;
+}
+
+.checkbox.secondary {
+    background: #6c757d;
+}
+
+.checkbox.secondary:after,
+.checkbox.secondary label {
+    background: #474d52;
+}
+
+.checkbox.danger {
+    background: #dc3545;
+}
+
+.checkbox.danger:after,
+.checkbox.danger label {
+    background: #981b27;
+}
+
+.checkbox.warning {
+    background: #ffc107;
+}
+
+.checkbox.warning:after,
+.checkbox.warning label {
+    background: #b38600;
+}
+
+.checkbox.dark {
+    background: #212529;
+}
+
+.checkbox.dark:after,
+.checkbox.dark label {
+    background: #000000;
+}
+
+.checkbox input[type=checkbox]:checked + label {
+    background: #fff;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3),
+        0 -1px 1px rgba(0, 0, 0, 1) inset;
+}
+
+/* Checkbox Responsive */
+@media only screen and (max-width: 575px) {
+    .checkbox {
+        height: 70px;
+    }
+
+    .checkbox label {
+        width: 35px;
+        height: 35px;
+    }
+
+    .checkbox:after {
+        height: 8px;
+    }
+    
+    .col-md-6 {
+        margin-bottom: 50px;
+    }
+}
